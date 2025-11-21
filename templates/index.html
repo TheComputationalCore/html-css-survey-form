@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SURVEY FORM</title>
+    <title>Survey Form</title>
     <link rel="stylesheet" href="q.css" />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,239 +14,192 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
-    <div class="container-sm">
-      <form class="row">
-        <div>
-          <strong>
-            Name
-            <span>&#42;</span>
-          </strong>
-        </div>
-        <div class="col-md-6 p-2 first">
-          <input type="text" class="form-control" aria-label="First name" />
-        </div>
-        <div class="col-md-6 p-2 last">
-          <input type="text" class="form-control" aria-label="Last name" />
+    <div class="container-sm py-4">
+      <form>
+
+        <!-- NAME SECTION -->
+        <div class="mb-3">
+          <label for="firstName" class="form-label">
+            Name <span class="text-danger">*</span>
+          </label>
+          <div class="row">
+            <div class="col-md-6 py-1">
+              <input
+                type="text"
+                id="firstName"
+                class="form-control"
+                placeholder="First name"
+                required
+              />
+            </div>
+            <div class="col-md-6 py-1">
+              <input
+                type="text"
+                id="lastName"
+                class="form-control"
+                placeholder="Last name"
+              />
+            </div>
+          </div>
         </div>
 
-        <div>
-          <strong>
-            Email
-            <span>&#42;</span>
-          </strong>
-        </div>
-        <div class="col p-2">
+        <!-- EMAIL SECTION -->
+        <div class="mb-3">
+          <label for="email" class="form-label">
+            Email <span class="text-danger">*</span>
+          </label>
           <input
             type="email"
+            id="email"
             class="form-control"
-            aria-label="First name"
             placeholder="example@gmail.com"
+            required
           />
         </div>
-      </form>
-      <div class="row">
-        <div>
-          <p>
-            <strong>
-              Your experience
-              <span>&#42;</span>
-            </strong>
+
+        <!-- EXPERIENCE RATING -->
+        <fieldset class="mb-4">
+          <legend>
+            <strong>Your experience <span class="text-danger">*</span></strong>
+          </legend>
+
+          <div class="star-rating mb-2">
+            <input type="radio" class="radio-input" id="star5" name="rating" value="5" required />
+            <label class="radio-label" for="star5" title="5 stars">5 stars</label>
+
+            <input type="radio" class="radio-input" id="star4" name="rating" value="4" />
+            <label class="radio-label" for="star4" title="4 stars">4 stars</label>
+
+            <input type="radio" class="radio-input" id="star3" name="rating" value="3" />
+            <label class="radio-label" for="star3" title="3 stars">3 stars</label>
+
+            <input type="radio" class="radio-input" id="star2" name="rating" value="2" />
+            <label class="radio-label" for="star2" title="2 stars">2 stars</label>
+
+            <input type="radio" class="radio-input" id="star1" name="rating" value="1" />
+            <label class="radio-label" for="star1" title="1 star">1 star</label>
+          </div>
+
+          <p class="starText">
+            Overall, how would you rate your experience with us?
           </p>
+        </fieldset>
+
+        <!-- SATISFACTION TABLE -->
+        <fieldset class="mb-4">
+          <legend>
+            <strong>How satisfied are you with <span class="text-danger">*</span></strong>
+          </legend>
+
+          <table class="table table-bordered text-center align-middle">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Very Unsatisfied</th>
+                <th>Unsatisfied</th>
+                <th>Neutral</th>
+                <th>Satisfied</th>
+                <th>Very Satisfied</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Purchase</th>
+                <td><input type="radio" name="purchaseReview" id="purchase-1" required /></td>
+                <td><input type="radio" name="purchaseReview" id="purchase-2" /></td>
+                <td><input type="radio" name="purchaseReview" id="purchase-3" /></td>
+                <td><input type="radio" name="purchaseReview" id="purchase-4" /></td>
+                <td><input type="radio" name="purchaseReview" id="purchase-5" /></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Service</th>
+                <td><input type="radio" name="serviceReview" id="service-1" required /></td>
+                <td><input type="radio" name="serviceReview" id="service-2" /></td>
+                <td><input type="radio" name="serviceReview" id="service-3" /></td>
+                <td><input type="radio" name="serviceReview" id="service-4" /></td>
+                <td><input type="radio" name="serviceReview" id="service-5" /></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Company Overall</th>
+                <td><input type="radio" name="overallReview" id="overall-1" required /></td>
+                <td><input type="radio" name="overallReview" id="overall-2" /></td>
+                <td><input type="radio" name="overallReview" id="overall-3" /></td>
+                <td><input type="radio" name="overallReview" id="overall-4" /></td>
+                <td><input type="radio" name="overallReview" id="overall-5" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+
+        <!-- LIKELIHOOD TABLE -->
+        <fieldset class="mb-4">
+          <legend>
+            <strong>How likely are you to <span class="text-danger">*</span></strong>
+          </legend>
+
+          <table class="table table-bordered text-center align-middle">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Very Unlikely</th>
+                <th>Unlikely</th>
+                <th>Neutral</th>
+                <th>Likely</th>
+                <th>Very Likely</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Buy from us again</th>
+                <td><input type="radio" name="review1" id="again-1" required /></td>
+                <td><input type="radio" name="review1" id="again-2" /></td>
+                <td><input type="radio" name="review1" id="again-3" /></td>
+                <td><input type="radio" name="review1" id="again-4" /></td>
+                <td><input type="radio" name="review1" id="again-5" /></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Recommend our product to others</th>
+                <td><input type="radio" name="review2" id="product-1" required /></td>
+                <td><input type="radio" name="review2" id="product-2" /></td>
+                <td><input type="radio" name="review2" id="product-3" /></td>
+                <td><input type="radio" name="review2" id="product-4" /></td>
+                <td><input type="radio" name="review2" id="product-5" /></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Recommend our company to others</th>
+                <td><input type="radio" name="review3" id="company-1" required /></td>
+                <td><input type="radio" name="review3" id="company-2" /></td>
+                <td><input type="radio" name="review3" id="company-3" /></td>
+                <td><input type="radio" name="review3" id="company-4" /></td>
+                <td><input type="radio" name="review3" id="company-5" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+
+        <!-- COMMENTS -->
+        <div class="mb-3">
+          <label for="commentBox" class="form-label"><strong>Additional Comments or Suggestions:</strong></label>
+          <textarea class="form-control" id="commentBox" rows="4"></textarea>
         </div>
 
-        <div class="star-rating">
-          <input
-            class="radio-input"
-            type="radio"
-            id="star5"
-            name="star-input"
-            value="5"
-          />
-          <label class="radio-label" class for="star5" title="5 stars">
-            5 stars
-          </label>
-
-          <input
-            class="radio-input"
-            type="radio"
-            id="star4"
-            name="star-input"
-            value="4"
-          />
-          <label class="radio-label" for="star4" title="4 stars">4 stars</label>
-
-          <input
-            class="radio-input"
-            type="radio"
-            id="star3"
-            name="star-input"
-            value="3"
-          />
-          <label class="radio-label" for="star3" title="3 stars">3 stars</label>
-
-          <input
-            class="radio-input"
-            type="radio"
-            id="star2"
-            name="star-input"
-            value="2"
-          />
-          <label class="radio-label" for="star2" title="2 stars">2 stars</label>
-
-          <input
-            class="radio-input"
-            type="radio"
-            id="star1"
-            name="star-input"
-            value="1"
-          />
-          <label class="radio-label" for="star1" title="1 star">1 star</label>
+        <!-- SUBMIT BUTTON -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary px-4">Submit</button>
         </div>
-        <p class="starText">
-          Overall, How would you rate your experience with us??
-        </p>
-      </div>
-      <div class="table1">
-        <p class="tableHeading">
-          <strong>
-            How satisfied are you with
-            <span>&#42;</span>
-          </strong>
-        </p>
-        <table class="tablee">
-          <tr class="hidden">
-            <td></td>
-            <td>Very Unsatisfied</td>
-            <td>Unsatisfied</td>
-            <td>Neutral</td>
-            <td>Satisfied</td>
-            <td>Very Satisfied</td>
-          </tr>
 
-          <tr>
-            <td>Purchase</td>
-            <td data-title="Very Unsatisfied">
-              <input type="radio" name="purchaseReview" id="" />
-            </td>
-            <td data-title="Unsatisfied">
-              <input type="radio" name="purchaseReview" id="" />
-            </td>
-            <td data-title="Neutral">
-              <input type="radio" name="purchaseReview" id="" />
-            </td>
-            <td data-title="Satisfied">
-              <input type="radio" name="purchaseReview" id="" />
-            </td>
-            <td data-title="Very Satisfied">
-              <input type="radio" name="purchaseReview" id="" />
-            </td>
-          </tr>
-          <tr>
-            <td>Service</td>
-            <td data-title="Very Unsatisfied">
-              <input type="radio" name="serviceReview" id="" />
-            </td>
-            <td data-title="Unsatisfied">
-              <input type="radio" name="serviceReview" id="" />
-            </td>
-            <td data-title="Neutral">
-              <input type="radio" name="serviceReview" id="" />
-            </td>
-            <td data-title="Satisfied">
-              <input type="radio" name="serviceReview" id="" />
-            </td>
-            <td data-title="Very Satisfied">
-              <input type="radio" name="serviceReview" id="" />
-            </td>
-          </tr>
-          <tr>
-            <td>Company Overall</td>
-            <td data-title="Very Unsatisfied">
-              <input type="radio" name="overallReview" id="" />
-            </td>
-            <td data-title="Unsatisfied">
-              <input type="radio" name="overallReview" id="" />
-            </td>
-            <td data-title="Neutral">
-              <input type="radio" name="overallReview" />
-            </td>
-            <td data-title="Satisfied">
-              <input type="radio" name="overallReview" />
-            </td>
-            <td data-title="Very Satisfied">
-              <input type="radio" name="overallReview" id="" />
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div class="table2">
-        <p class="tableHeading">
-          <strong>
-            How likely are you to
-            <span>&#42;</span>
-          </strong>
-        </p>
-        <table class="tablee">
-          <tr class="hidden">
-            <td></td>
-            <td>Very Unlikely</td>
-            <td>Unlikely</td>
-            <td>Neutral</td>
-            <td>Likely</td>
-            <td>Very Likely</td>
-          </tr>
-          <tr>
-            <td>Buy from us again</td>
-            <td data-title="Very Unlikely">
-              <input type="radio" name="review1" />
-            </td>
-            <td data-title="Unlikely"><input type="radio" name="review1" /></td>
-            <td data-title="Neutral"><input type="radio" name="review1" /></td>
-            <td data-title="Likely"><input type="radio" name="review1" /></td>
-            <td data-title="Very Likely">
-              <input type="radio" name="review1" id="" />
-            </td>
-          </tr>
-          <tr>
-            <td>Recommond our product to others</td>
-            <td data-title="Very Unlikely">
-              <input type="radio" name="review2" />
-            </td>
-            <td data-title="Unlikely"><input type="radio" name="review2" /></td>
-            <td data-title="Neutral"><input type="radio" name="review2" /></td>
-            <td data-title="Likely"><input type="radio" name="review2" /></td>
-            <td data-title="Very Likely">
-              <input type="radio" name="review2" i />
-            </td>
-          </tr>
-          <tr>
-            <td>Recommond our company to others</td>
-            <td data-title="Very Unlikely">
-              <input type="radio" name="review3" />
-            </td>
-            <td data-title="Unlikely"><input type="radio" name="review3" /></td>
-            <td data-title="Netural"><input type="radio" name="review3" /></td>
-            <td data-title="Likely"><input type="radio" name="review3" /></td>
-            <td data-title="Very Likely">
-              <input type="radio" name="review3" />
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div>
-        <div>
-          <p><strong>Additional Comments or Suggestions :</strong></p>
-        </div>
-        <div>
-          <textarea name="" id="commentBox"></textarea>
-        </div>
-        <div class="button-div">
-          <input type="button" value="SUBMIT" id="button" />
-        </div>
-      </div>
+      </form>
     </div>
 
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
