@@ -1,50 +1,106 @@
-# Survey Form (Task 7)
+# 🌐 HTML & CSS Survey Form — Professional Project
 
-This repository contains an HTML and CSS project for a survey form designed to collect user feedback. The form includes fields for user information, ratings, satisfaction levels, likelihood of future interactions, and additional comments.
+[![Deploy](https://github.com/TheComputationalCore/html-css-survey-form/actions/workflows/deploy.yml/badge.svg)](https://github.com/TheComputationalCore/html-css-survey-form/actions/workflows/deploy.yml)
+[![HTML Lint](https://github.com/TheComputationalCore/html-css-survey-form/actions/workflows/html-lint.yml/badge.svg)](https://github.com/TheComputationalCore/html-css-survey-form/actions/workflows/html-lint.yml)
+[![CSS Lint](https://github.com/TheComputationalCore/html-css-survey-form/actions/workflows/css-lint.yml/badge.svg)](https://github.com/TheComputationalCore/html-css-survey-form/actions/workflows/css-lint.yml)
+[![Prettier](https://github.com/TheComputationalCore/html-css-survey-form/actions/workflows/prettier.yml/badge.svg)](https://github.com/TheComputationalCore/html-css-survey-form/actions/workflows/prettier.yml)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Project Structure
+A modern, responsive, and fully accessible **Survey Form** built using **HTML5**, **CSS3**, and **Bootstrap 5**.  
+Includes CI/CD automation with GitHub Actions, auto-formatting, linting, and GitHub Pages deployment.
 
-- **index.html**: The main HTML file containing the structure of the survey form.
-- **q.css**: The CSS file that styles the survey form.
-- **Screenshot 2024-09-27 at 6.29.27 PM.png, Screenshot 2024-09-27 at 6.29.51 PM.png**: Screenshots of the survey form implementation.
+---
 
-## Survey Form Overview
+## 🚀 Live Demo  
+👉 **https://thecomputationalcore.github.io/html-css-survey-form/**
 
-The survey form collects the following information:
-- **User Information**:
-  - First Name (required)
-  - Last Name
-  - Email (required)
-- **Experience Rating**:
-  - A star rating system to rate the overall experience (required).
-- **Satisfaction Levels**:
-  - Radio buttons to rate satisfaction with Purchase, Service, and Company Overall (Very Unsatisfied to Very Satisfied).
-- **Likelihood Questions**:
-  - Radio buttons to gauge the likelihood of buying again, recommending products, and recommending the company (Very Unlikely to Very Likely).
-- **Comments/Suggestions**:
-  - A textarea for additional feedback.
-- **Submit Button**:
-  - A button to submit the form.
+---
 
-## How to View
+## 📂 Project Structure  
+```
+html-css-survey-form/
+├── index.html
+├── q.css
+├── screenshots/
+│   ├── 1.png
+│   ├── 2.png
+├── .stylelintrc.json
+├── .github/workflows/
+│   ├── deploy.yml
+│   ├── html-lint.yml
+│   ├── css-lint.yml
+│   ├── prettier.yml
+└── README.md
+```
 
-1. **Clone the Repository**:
+---
+
+## ✨ Features
+
+### 🧩 **Form Sections**
+- First & Last Name  
+- Email with validation  
+- Star Rating System ⭐⭐⭐⭐⭐  
+- Satisfaction Table  
+- Likelihood Table  
+- Comments/Suggestions  
+- Submit Button  
+
+### ♿ **Accessibility**
+- Proper label associations  
+- Semantic structure  
+- Screen-reader friendly  
+- Color contrast compliant  
+
+### 📱 **Responsive Design**
+- Mobile-friendly tables  
+- Flexible layout  
+- Adaptive star rating  
+
+### 🎨 **Clean UI**
+- Card-based layout  
+- Shadows & hover effects  
+- Smooth spacing and typography  
+
+---
+
+## 🛠 Tech Stack Badges
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white)
+
+---
+
+## 📸 Screenshots  
+
+### **Screenshot 1**  
+![Screenshot 1](./screenshots/1.png)
+
+### **Screenshot 2**  
+![Screenshot 2](./screenshots/2.png)
+
+---
+
+## ▶️ Run Locally
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/thesoulseizure/task-7.git
+   git clone https://github.com/TheComputationalCore/html-css-survey-form.git
    ```
-2. **Navigate to the Project Directory**:
-   ```bash
-   cd task-7
+2. Open in browser:
    ```
-3. **Open the HTML File**:
-   - Open `index.html` in a web browser to view the survey form.
-   - Ensure `q.css` is in the same directory for the styles to apply.
+   index.html
+   ```
 
-## Requirements
+---
 
-- A web browser to view the HTML file.
-- No additional setup is required since this is a static HTML and CSS project.
+## 📜 License  
+Licensed under the **MIT License**.
 
-## Screenshots
+---
 
-The repository includes screenshots (e.g., Screenshot 2024-09-27 at 6.29.27 PM.png) that show the implementation of the survey form. Refer to these images to view the form visually.
+## 🌟 Author  
+**TheComputationalCore**  
+Crafting polished, professional frontend projects.
