@@ -23,11 +23,11 @@ jobs:
         run: npm install -g prettier
 
       - name: Check formatting
-        run: prettier --check "templates/**/*.{html,css}"
+        run: prettier --check "**/*.{html,css}"
 
       - name: Auto-fix formatting
         if: failure()
-        run: prettier --write "templates/**/*.{html,css}"
+        run: prettier --write "**/*.{html,css}"
 
       - name: Push formatted changes
         if: failure()
